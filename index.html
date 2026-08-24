@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASX Intermediação Ltda - Soluções Corporativas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Roboto', 'sans-serif'], heading: ['Montserrat', 'sans-serif'] },
+                    colors: { corporate: { 50: '#f0f4f8', 100: '#d9e2ec', 500: '#334e68', 600: '#243b53', 900: '#102a43', accent: '#0ea5e9' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .split-bg { background: linear-gradient(90deg, #102a43 0%, #102a43 50%, #f0f4f8 50%, #f0f4f8 100%); }
+        @media (max-width: 768px) { .split-bg { background: linear-gradient(180deg, #102a43 0%, #102a43 50%, #f0f4f8 50%, #f0f4f8 100%); } }
+        .modal { opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .modal.active { opacity: 1; visibility: visible; }
+        .modal-content { transform: scale(0.95); transition: all 0.3s ease; }
+        .modal.active .modal-content { transform: scale(1); }
+    </style>
+</head>
+<body class="bg-corporate-50 text-corporate-900 antialiased selection:bg-corporate-accent selection:text-white">
+
+    <header class="absolute top-0 w-full z-50 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-white font-heading font-extrabold text-2xl tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-corporate-accent flex items-center justify-center rounded">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                ASX
+            </div>
+            <div class="flex items-center gap-6">
+                <button onclick="document.getElementById('modal-login').classList.add('active')" class="text-white text-sm font-medium hover:text-corporate-accent transition">Área do Cliente</button>
+                <button onclick="document.getElementById('modal-cad').classList.add('active')" class="bg-corporate-accent text-white px-6 py-2 rounded text-sm font-heading font-semibold hover:bg-sky-400 transition shadow-lg">Abrir Conta</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sec 1: Split Hero -->
+    <section class="min-h-[90vh] split-bg flex items-center relative overflow-hidden pt-24 md:pt-0 pb-16">
+        <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-white py-12" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold tracking-wider uppercase mb-8 border border-white/20">
+                    <span class="w-2 h-2 rounded-full bg-corporate-accent animate-pulse"></span> Intermediação Estratégica
+                </div>
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold mb-6 leading-[1.1]">
+                    Conectando o seu negócio ao <span class="text-corporate-accent">sucesso global.</span>
+                </h1>
+                <p class="text-corporate-100 text-lg font-light max-w-lg mb-10 leading-relaxed">
+                    Facilitamos transações, reduzimos riscos corporativos e otimizamos a cadeia de suprimentos da sua empresa com inteligência de mercado e solidez financeira.
+                </p>
+                <button onclick="document.getElementById('modal-cad').classList.add('active')" class="bg-corporate-accent hover:bg-sky-400 text-white font-heading font-semibold px-8 py-4 rounded transition shadow-lg inline-flex items-center gap-2">
+                    Iniciar Parceria <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+
+            <div class="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left">
+                <div class="absolute inset-0 bg-corporate-900/20 z-10 mix-blend-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Corporate Office" class="w-full h-full object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Sec 2: Numbers -->
+    <section class="py-16 bg-white border-b border-corporate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="font-heading text-4xl font-extrabold text-corporate-900 mb-2">R$ 2B+</div>
+                    <div class="text-sm text-corporate-600 font-medium uppercase tracking-widest">Volume Negociado</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="font-heading text-4xl font-extrabold text-corporate-accent mb-2">500+</div>
+                    <div class="text-sm text-corporate-600 font-medium uppercase tracking-widest">Parceiros Globais</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="font-heading text-4xl font-extrabold text-corporate-900 mb-2">15</div>
+                    <div class="text-sm text-corporate-600 font-medium uppercase tracking-widest">Países Atendidos</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="font-heading text-4xl font-extrabold text-corporate-accent mb-2">99.9%</div>
+                    <div class="text-sm text-corporate-600 font-medium uppercase tracking-widest">Taxa de Sucesso</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sec 3: Expertise Grid -->
+    <section class="py-24 bg-corporate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl font-extrabold text-corporate-900 mb-4">Nossa Expertise Estratégica</h2>
+                <p class="text-corporate-600 max-w-2xl mx-auto">Soluções modulares desenvolvidas para escalar operações B2B com total segurança institucional.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-xl shadow-sm border border-corporate-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-corporate-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3 text-corporate-900">Inteligência Comercial</h3>
+                    <p class="text-corporate-600 leading-relaxed text-sm">Análise de dados avançada para identificar as melhores oportunidades de negociação no mercado internacional.</p>
+                </div>
+                
+                <div class="bg-white p-10 rounded-xl shadow-sm border border-corporate-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-corporate-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3 text-corporate-900">Segurança Contratual</h3>
+                    <p class="text-corporate-600 leading-relaxed text-sm">Estruturação jurídica e compliance rigoroso para garantir que todas as transações ocorram sem riscos legais.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-xl shadow-sm border border-corporate-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-corporate-50 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-corporate-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl mb-3 text-corporate-900">Expansão B2B</h3>
+                    <p class="text-corporate-600 leading-relaxed text-sm">Facilitamos a entrada da sua marca em novos territórios através de parcerias sólidas e infraestrutura robusta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sec 4: About / Process -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Processo" class="rounded-2xl shadow-xl w-full" />
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="font-heading text-4xl font-extrabold text-corporate-900 mb-6">Nosso Processo de Validação</h2>
+                <p class="text-corporate-600 mb-8 leading-relaxed">
+                    Antes de qualquer intermediação, realizamos uma Due Diligence profunda em todas as pontas da negociação. Avaliamos riscos, liquidez e conformidade legal.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex gap-4 items-start">
+                        <div class="bg-corporate-50 p-2 rounded text-corporate-accent font-bold">01</div>
+                        <div>
+                            <h4 class="font-bold text-corporate-900">Análise de Viabilidade</h4>
+                            <p class="text-sm text-corporate-600">Levantamento de dados e projeção de resultados.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="bg-corporate-50 p-2 rounded text-corporate-accent font-bold">02</div>
+                        <div>
+                            <h4 class="font-bold text-corporate-900">Garantias e Seguros</h4>
+                            <p class="text-sm text-corporate-600">Mapeamento de garantias reais para blindar a operação.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="bg-corporate-50 p-2 rounded text-corporate-accent font-bold">03</div>
+                        <div>
+                            <h4 class="font-bold text-corporate-900">Liquidação Escrow</h4>
+                            <p class="text-sm text-corporate-600">Os fundos são liberados apenas com o cumprimento das cláusulas.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-corporate-900 py-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10 text-corporate-100">
+            <div>
+                <div class="font-heading font-bold text-2xl tracking-tighter flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-corporate-accent flex items-center justify-center rounded text-white text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    ASX
+                </div>
+                <p class="text-sm font-medium mb-2">Contato Corporativo:</p>
+                <a href="mailto:contato@asxintermediacao.com" class="text-corporate-accent hover:text-white transition">contato@asxintermediacao.com</a>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end">
+                <span class="text-xs uppercase tracking-widest text-corporate-500 mb-4">Empresa Verificada</span>
+                <a href="https://www.reclameaqui.com.br/empresa/asx-ntermediacao-ltda/sobre/" target="_blank" class="block hover:opacity-80 transition transform hover:scale-105">
+                    <img src="selo-ra.png" alt="Selo Reclame Aqui" class="h-12 object-contain bg-white rounded p-1" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-login" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-corporate-900/80 backdrop-blur-sm" onclick="document.getElementById('modal-login').classList.remove('active')"></div>
+        <div class="modal-content bg-white w-full max-w-md rounded-xl shadow-2xl relative z-10 p-10">
+            <button onclick="document.getElementById('modal-login').classList.remove('active')" class="absolute top-6 right-6 text-corporate-400 hover:text-corporate-900">&times;</button>
+            <h3 class="text-2xl font-heading font-bold text-corporate-900 mb-6">Acesso Restrito</h3>
+            <form onsubmit="event.preventDefault(); alert('Acesso validado!'); document.getElementById('modal-login').classList.remove('active');">
+                <input type="email" placeholder="E-mail Corporativo" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm mb-4">
+                <input type="password" placeholder="Senha" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm mb-6">
+                <button type="submit" class="w-full bg-corporate-900 text-white font-heading font-semibold py-3.5 rounded hover:bg-corporate-600 transition">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-cad" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-corporate-900/80 backdrop-blur-sm" onclick="document.getElementById('modal-cad').classList.remove('active')"></div>
+        <div class="modal-content bg-white w-full max-w-lg rounded-xl shadow-2xl relative z-10 p-10">
+            <button onclick="document.getElementById('modal-cad').classList.remove('active')" class="absolute top-6 right-6 text-corporate-400 hover:text-corporate-900">&times;</button>
+            <h3 class="text-2xl font-heading font-bold text-corporate-900 mb-6">Abertura de Conta B2B</h3>
+            <form onsubmit="event.preventDefault(); alert('Solicitação enviada. Nossa equipe entrará em contato.'); document.getElementById('modal-cad').classList.remove('active');">
+                <input type="text" placeholder="Razão Social" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm mb-4">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <input type="text" placeholder="CNPJ" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm">
+                    <input type="tel" placeholder="Telefone Comercial" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm">
+                </div>
+                <input type="email" placeholder="E-mail do Responsável" required class="w-full bg-corporate-50 border border-corporate-100 px-4 py-3 rounded outline-none focus:border-corporate-accent transition text-sm mb-6">
+                <button type="submit" class="w-full bg-corporate-accent text-white font-heading font-semibold py-3.5 rounded hover:bg-sky-400 transition">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 50 });</script>
+</body>
+</html>
